@@ -76,9 +76,59 @@ position:fixed;
 inset:0;
 pointer-events:none;
 }
+
+  #startScreen{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+cursor:pointer;
+transition:1s;
+}
+
+.box{
+text-align:center;
+color:#fff;
+font-family:Poppins,sans-serif;
+}
+
+.box h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.box p{
+font-size:20px;
+opacity:.8;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+
+50%{
+opacity:.3;
+}
+
+}
 </style>
 </head>
 <body>
+  <div id="startScreen">
+    <div class="box">
+        <h1>🎂 Happy Birthday 🎂</h1>
+        <p>Tap Anywhere to Begin ✨</p>
+    </div>
+</div>
+
+<audio id="music" loop preload="auto">
+    <source src="./bday.mp3" type="audio/mpeg">
+</audio>
 
 <div class="stars"></div>
 <div class="moon"></div>
